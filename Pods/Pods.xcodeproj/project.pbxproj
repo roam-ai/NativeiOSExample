@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		EACB84FBFAD5BA2E6EB945DF04829763 /* roam-ios */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EE8840988243FC2A76D63FB263896BF0 /* Build configuration list for PBXAggregateTarget "roam-ios" */;
+			buildPhases = (
+				2D6D0E328B9834328193072EA36E94C0 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = "roam-ios";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		65C0BB1D1EF91F088FE95E5234A3ABEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		B5D9FB23FB213EB204D6FB8E7EAA35FA /* Pods-iOSNativeSelfTracking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 212503EAECEA6AA62759DABC99490DE1 /* Pods-iOSNativeSelfTracking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6C0FF8E8B318053624935CEC665D786 /* Pods-iOSNativeSelfTracking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8DF531FEDEBD402F7C9CEC782B7F08 /* Pods-iOSNativeSelfTracking-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E03584EC8F741D79835A469CE64E26F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EACB84FBFAD5BA2E6EB945DF04829763;
+			remoteInfo = "roam-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		055CBF328CD7653534493F34B6583F80 /* AWSAuthCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AWSAuthCore.xcframework; path = Roam/AWSAuthCore.xcframework; sourceTree = "<group>"; };
+		1496C21BC3FD0E339192D9BADF3A09BB /* Pods-iOSNativeSelfTracking-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iOSNativeSelfTracking-acknowledgements.markdown"; sourceTree = "<group>"; };
+		212503EAECEA6AA62759DABC99490DE1 /* Pods-iOSNativeSelfTracking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iOSNativeSelfTracking-umbrella.h"; sourceTree = "<group>"; };
+		336D0481FB7DF8EFE25EC4376E163A8D /* Pods-iOSNativeSelfTracking */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-iOSNativeSelfTracking"; path = Pods_iOSNativeSelfTracking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34C4DF71464CE5228D4FCB65B5AE58A9 /* roam-ios-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "roam-ios-xcframeworks.sh"; sourceTree = "<group>"; };
+		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		511B895C514E5B43F5EA6F208C74F05C /* Pods-iOSNativeSelfTracking-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iOSNativeSelfTracking-Info.plist"; sourceTree = "<group>"; };
+		586EDD1B6B5C2275E4C403ED1A3EFA8B /* Pods-iOSNativeSelfTracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOSNativeSelfTracking.debug.xcconfig"; sourceTree = "<group>"; };
+		58B0E542E561C6113B8CF827EA260DA4 /* Pods-iOSNativeSelfTracking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOSNativeSelfTracking.release.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AAC6C9F3DEC371C2C7DB3B49C9AD5FFB /* AWSCognitoIdentityProviderASF.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AWSCognitoIdentityProviderASF.xcframework; path = Roam/AWSCognitoIdentityProviderASF.xcframework; sourceTree = "<group>"; };
+		AF77F3F5E7789FE325D252086A5547F7 /* AWSCognitoIdentityProvider.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AWSCognitoIdentityProvider.xcframework; path = Roam/AWSCognitoIdentityProvider.xcframework; sourceTree = "<group>"; };
+		B9A14458A6EBDD948D4B90523243EEDE /* roam-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "roam-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		C0CA689D4278E7B18C8DEDB52B72DCEE /* AWSCore.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AWSCore.xcframework; path = Roam/AWSCore.xcframework; sourceTree = "<group>"; };
+		C468E846EA07800054A4E51240A9FCDD /* Pods-iOSNativeSelfTracking-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iOSNativeSelfTracking-acknowledgements.plist"; sourceTree = "<group>"; };
+		C64E76A97D0D35B19E680FF43473215C /* Roam.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = Roam.xcframework; path = Roam/Roam.xcframework; sourceTree = "<group>"; };
+		CAE0DF8707D8B9C75FDBDF3606B897E7 /* AWSMobileClientXCF.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AWSMobileClientXCF.xcframework; path = Roam/AWSMobileClientXCF.xcframework; sourceTree = "<group>"; };
+		D9AD0CB14FBE26A404E29BD61C18A0EA /* roam-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "roam-ios.release.xcconfig"; sourceTree = "<group>"; };
+		DE4286F0DE586D43AD2172A097B6D2A0 /* Pods-iOSNativeSelfTracking-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOSNativeSelfTracking-frameworks.sh"; sourceTree = "<group>"; };
+		F7A22E62B2AFB949091183C4C8BADB5A /* AWSIoT.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AWSIoT.xcframework; path = Roam/AWSIoT.xcframework; sourceTree = "<group>"; };
+		FE8DF531FEDEBD402F7C9CEC782B7F08 /* Pods-iOSNativeSelfTracking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iOSNativeSelfTracking-dummy.m"; sourceTree = "<group>"; };
+		FFB2039219C9583314DE2EDF340A32AF /* Pods-iOSNativeSelfTracking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iOSNativeSelfTracking.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70409EC588A4C51AC7468C679769C593 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65C0BB1D1EF91F088FE95E5234A3ABEA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		038A4C0ABEC2A531D27FD88EC1045002 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				336D0481FB7DF8EFE25EC4376E163A8D /* Pods-iOSNativeSelfTracking */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BE2FD71A43E3F4F36D504A24E2A2AF5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5019BC7B87CFE2B1A15350FBBB09EB52 /* Pods-iOSNativeSelfTracking */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		47FA5FE2CC38BFA0164B09CF10012093 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				34C4DF71464CE5228D4FCB65B5AE58A9 /* roam-ios-xcframeworks.sh */,
+				B9A14458A6EBDD948D4B90523243EEDE /* roam-ios.debug.xcconfig */,
+				D9AD0CB14FBE26A404E29BD61C18A0EA /* roam-ios.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/roam-ios";
+			sourceTree = "<group>";
+		};
+		5019BC7B87CFE2B1A15350FBBB09EB52 /* Pods-iOSNativeSelfTracking */ = {
+			isa = PBXGroup;
+			children = (
+				FFB2039219C9583314DE2EDF340A32AF /* Pods-iOSNativeSelfTracking.modulemap */,
+				1496C21BC3FD0E339192D9BADF3A09BB /* Pods-iOSNativeSelfTracking-acknowledgements.markdown */,
+				C468E846EA07800054A4E51240A9FCDD /* Pods-iOSNativeSelfTracking-acknowledgements.plist */,
+				FE8DF531FEDEBD402F7C9CEC782B7F08 /* Pods-iOSNativeSelfTracking-dummy.m */,
+				DE4286F0DE586D43AD2172A097B6D2A0 /* Pods-iOSNativeSelfTracking-frameworks.sh */,
+				511B895C514E5B43F5EA6F208C74F05C /* Pods-iOSNativeSelfTracking-Info.plist */,
+				212503EAECEA6AA62759DABC99490DE1 /* Pods-iOSNativeSelfTracking-umbrella.h */,
+				586EDD1B6B5C2275E4C403ED1A3EFA8B /* Pods-iOSNativeSelfTracking.debug.xcconfig */,
+				58B0E542E561C6113B8CF827EA260DA4 /* Pods-iOSNativeSelfTracking.release.xcconfig */,
+			);
+			name = "Pods-iOSNativeSelfTracking";
+			path = "Target Support Files/Pods-iOSNativeSelfTracking";
+			sourceTree = "<group>";
+		};
+		5518E47A296047018179B997C7BD771E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				055CBF328CD7653534493F34B6583F80 /* AWSAuthCore.xcframework */,
+				AF77F3F5E7789FE325D252086A5547F7 /* AWSCognitoIdentityProvider.xcframework */,
+				AAC6C9F3DEC371C2C7DB3B49C9AD5FFB /* AWSCognitoIdentityProviderASF.xcframework */,
+				C0CA689D4278E7B18C8DEDB52B72DCEE /* AWSCore.xcframework */,
+				F7A22E62B2AFB949091183C4C8BADB5A /* AWSIoT.xcframework */,
+				CAE0DF8707D8B9C75FDBDF3606B897E7 /* AWSMobileClientXCF.xcframework */,
+				C64E76A97D0D35B19E680FF43473215C /* Roam.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91B9F76F772B3EDEDAC7A477DE47F5FF /* Roam */ = {
+			isa = PBXGroup;
+			children = (
+				5518E47A296047018179B997C7BD771E /* Frameworks */,
+			);
+			name = Roam;
+			sourceTree = "<group>";
+		};
+		94FD4E6C9027AD5FA94A69B34E8EA2FB /* roam-ios */ = {
+			isa = PBXGroup;
+			children = (
+				91B9F76F772B3EDEDAC7A477DE47F5FF /* Roam */,
+				47FA5FE2CC38BFA0164B09CF10012093 /* Support Files */,
+			);
+			name = "roam-ios";
+			path = "roam-ios";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				EDFF87F03FA40B5A4F819BF96EFFE209 /* Pods */,
+				038A4C0ABEC2A531D27FD88EC1045002 /* Products */,
+				2BE2FD71A43E3F4F36D504A24E2A2AF5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4801F62A6B08CD9B5410329F1A18FDE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EDFF87F03FA40B5A4F819BF96EFFE209 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				94FD4E6C9027AD5FA94A69B34E8EA2FB /* roam-ios */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6CCCDD8B6E861EA889B7C0FCFF5F7F9A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D9FB23FB213EB204D6FB8E7EAA35FA /* Pods-iOSNativeSelfTracking-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8960A4A2AD8B506B85247F9E096C3E4F /* Pods-iOSNativeSelfTracking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7834995865263C7CCA541596E8D96F4F /* Build configuration list for PBXNativeTarget "Pods-iOSNativeSelfTracking" */;
+			buildPhases = (
+				6CCCDD8B6E861EA889B7C0FCFF5F7F9A /* Headers */,
+				23539C9D3ADE4055C8FCA4E53939A820 /* Sources */,
+				70409EC588A4C51AC7468C679769C593 /* Frameworks */,
+				FD381DCE55CAFADA6DF9EAC90DBA4764 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44BD4ACEFFF181F91EF7DD9554E17FED /* PBXTargetDependency */,
+			);
+			name = "Pods-iOSNativeSelfTracking";
+			productName = Pods_iOSNativeSelfTracking;
+			productReference = 336D0481FB7DF8EFE25EC4376E163A8D /* Pods-iOSNativeSelfTracking */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 038A4C0ABEC2A531D27FD88EC1045002 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8960A4A2AD8B506B85247F9E096C3E4F /* Pods-iOSNativeSelfTracking */,
+				EACB84FBFAD5BA2E6EB945DF04829763 /* roam-ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD381DCE55CAFADA6DF9EAC90DBA4764 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D6D0E328B9834328193072EA36E94C0 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/roam-ios/roam-ios-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/roam-ios/roam-ios-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/roam-ios/roam-ios-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23539C9D3ADE4055C8FCA4E53939A820 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6C0FF8E8B318053624935CEC665D786 /* Pods-iOSNativeSelfTracking-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44BD4ACEFFF181F91EF7DD9554E17FED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "roam-ios";
+			target = EACB84FBFAD5BA2E6EB945DF04829763 /* roam-ios */;
+			targetProxy = E03584EC8F741D79835A469CE64E26F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1F27F381966405FA1B8EEF576E3B8148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58B0E542E561C6113B8CF827EA260DA4 /* Pods-iOSNativeSelfTracking.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-iOSNativeSelfTracking/Pods-iOSNativeSelfTracking-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iOSNativeSelfTracking/Pods-iOSNativeSelfTracking.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		246B1C699BF8E8EB817A271693E63E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9A14458A6EBDD948D4B90523243EEDE /* roam-ios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4DFD7A4AD416DDC41FF42514769A0F9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 586EDD1B6B5C2275E4C403ED1A3EFA8B /* Pods-iOSNativeSelfTracking.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-iOSNativeSelfTracking/Pods-iOSNativeSelfTracking-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iOSNativeSelfTracking/Pods-iOSNativeSelfTracking.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		EF7AE4CAB0F8BCBA6CF76890BEC563D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9AD0CB14FBE26A404E29BD61C18A0EA /* roam-ios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7834995865263C7CCA541596E8D96F4F /* Build configuration list for PBXNativeTarget "Pods-iOSNativeSelfTracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DFD7A4AD416DDC41FF42514769A0F9D /* Debug */,
+				1F27F381966405FA1B8EEF576E3B8148 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE8840988243FC2A76D63FB263896BF0 /* Build configuration list for PBXAggregateTarget "roam-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				246B1C699BF8E8EB817A271693E63E18 /* Debug */,
+				EF7AE4CAB0F8BCBA6CF76890BEC563D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

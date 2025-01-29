@@ -1,0 +1,8 @@
+${PODS_ROOT}/Target Support Files/Pods-iOSNativeSelfTracking/Pods-iOSNativeSelfTracking-frameworks.sh
+${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/Roam.framework/Roam
+${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSAuthCore.framework/AWSAuthCore
+${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSCognitoIdentityProvider.framework/AWSCognitoIdentityProvider
+${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSCognitoIdentityProviderASF.framework/AWSCognitoIdentityProviderASF
+${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSCore.framework/AWSCore
+${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSIoT.framework/AWSIoT
+${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSMobileClientXCF.framework/AWSMobileClientXCF

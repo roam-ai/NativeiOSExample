@@ -1,0 +1,7 @@
+${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/Roam.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSAuthCore.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSCognitoIdentityProvider.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSCognitoIdentityProviderASF.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSCore.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSIoT.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSMobileClientXCF.framework
