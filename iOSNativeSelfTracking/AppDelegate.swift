@@ -10,10 +10,7 @@ import Roam
 class AppDelegate: UIResponder, UIApplicationDelegate {
    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Add your publish key
-        Roam.initialize("PUBLISH_KEY")
-        Roam.requestLocation()
-        Roam.delegate = self
+        RoamSDKHandler.shared.initalize()
         return true
     }
 
@@ -32,19 +29,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
-}
-
-extension AppDelegate: RoamDelegate {
-    func didUpdateLocation(_ locations: [RoamLocation]) {
-        
-        let latitude = locations[0].location.coordinate.latitude
-        let longitude = locations[0].location.coordinate.longitude
-        let speed = locations[0].speed
-        let horizontalAccuracy = locations[0].location.horizontalAccuracy
-        let verticalAccuracy = locations[0].location.verticalAccuracy
-        let recordedAt = locations[0].recordedAt
-        
-        
-        print("---->> latitude: \(latitude), longitude: \(longitude)")
-    }
 }

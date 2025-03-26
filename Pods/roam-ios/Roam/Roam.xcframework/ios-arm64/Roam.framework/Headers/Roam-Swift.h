@@ -365,11 +365,12 @@ SWIFT_CLASS_NAMED("MqttLocationData")
 @property (nonatomic, copy) NSString * _Nullable app_details;
 @property (nonatomic, copy) NSString * _Nullable app_id;
 @property (nonatomic, copy) NSString * _Nullable app_installation_date;
+@property (nonatomic, copy) NSString * _Nullable app_name;
 @property (nonatomic, copy) NSString * _Nullable app_version;
 @property (nonatomic) int16_t battery_remaining;
 @property (nonatomic) BOOL battery_saver;
 @property (nonatomic, copy) NSString * _Nullable battery_status;
-@property (nonatomic, copy) NSString * _Nullable build_id;
+@property (nonatomic, copy) NSString * _Nullable bundle_id;
 @property (nonatomic, copy) NSString * _Nullable carrier_name;
 @property (nonatomic, copy) NSData * _Nullable centroid;
 @property (nonatomic) double course;
@@ -686,6 +687,25 @@ SWIFT_CLASS("_TtC4Roam10RoamEvents")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+SWIFT_CLASS("_TtC4Roam17RoamGeofenceEvent")
+@interface RoamGeofenceEvent : NSObject
+@property (nonatomic, readonly) int64_t geofenceId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull eventType;
+- (NSDictionary<NSString *, id> * _Nonnull)toDictionary SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC4Roam19RoamGeofenceMonitor")
+@interface RoamGeofenceMonitor : NSObject <CLLocationManagerDelegate>
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RoamGeofenceMonitor * _Nonnull shared;)
++ (RoamGeofenceMonitor * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @class RoamTripEvent;
 
 SWIFT_CLASS("_TtC4Roam11RoamGetTrip")
@@ -733,7 +753,7 @@ SWIFT_CLASS("_TtC4Roam12RoamLocation")
 @property (nonatomic, copy) NSString * _Nonnull deviceModel;
 @property (nonatomic, copy) NSString * _Nonnull manufacturer;
 @property (nonatomic, copy) NSString * _Nonnull networkType;
-@property (nonatomic, copy) NSString * _Nonnull buildID;
+@property (nonatomic, copy) NSString * _Nonnull bundleId;
 @property (nonatomic, copy) NSString * _Nonnull kernelVersion;
 @property (nonatomic, copy) NSString * _Nonnull ipAddress;
 @property (nonatomic, copy) NSString * _Nonnull publicIpAddress;
@@ -749,6 +769,10 @@ SWIFT_CLASS("_TtC4Roam12RoamLocation")
 @property (nonatomic, copy) NSString * _Nonnull appInstallationDate;
 @property (nonatomic, copy) NSString * _Nonnull appVersion;
 @property (nonatomic, strong) RoamCentroid * _Nullable centroid;
+@property (nonatomic, copy) NSString * _Nonnull appName;
+@property (nonatomic, copy) NSString * _Nonnull locationId;
+@property (nonatomic, copy) NSString * _Nonnull appId;
+@property (nonatomic, copy) NSString * _Nonnull sdkVerison;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -839,7 +863,7 @@ SWIFT_CLASS("_TtC4Roam11RoamPublish")
 @property (nonatomic) BOOL activity;
 @property (nonatomic) BOOL network_type;
 @property (nonatomic) BOOL network_state;
-@property (nonatomic) BOOL build_id;
+@property (nonatomic) BOOL bundle_id;
 @property (nonatomic) BOOL kernel_version;
 @property (nonatomic) BOOL ip_address;
 @property (nonatomic) BOOL public_ip_address;
@@ -853,6 +877,7 @@ SWIFT_CLASS("_TtC4Roam11RoamPublish")
 @property (nonatomic) BOOL carrier_name;
 @property (nonatomic) BOOL app_installation_date;
 @property (nonatomic) BOOL app_version;
+@property (nonatomic) BOOL app_name;
 @property (nonatomic) BOOL centroid;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)enableAll;
@@ -1285,18 +1310,18 @@ SWIFT_CLASS_NAMED("TripsLocal")
 
 
 @interface TripsLocal (SWIFT_EXTENSION(Roam))
-- (void)addEventsObject:(TripEventsLocal * _Nonnull)value;
-- (void)removeEventsObject:(TripEventsLocal * _Nonnull)value;
-- (void)addEvents:(NSSet * _Nonnull)values;
-- (void)removeEvents:(NSSet * _Nonnull)values;
-@end
-
-
-@interface TripsLocal (SWIFT_EXTENSION(Roam))
 - (void)addStopObject:(TripStop * _Nonnull)value;
 - (void)removeStopObject:(TripStop * _Nonnull)value;
 - (void)addStop:(NSSet * _Nonnull)values;
 - (void)removeStop:(NSSet * _Nonnull)values;
+@end
+
+
+@interface TripsLocal (SWIFT_EXTENSION(Roam))
+- (void)addEventsObject:(TripEventsLocal * _Nonnull)value;
+- (void)removeEventsObject:(TripEventsLocal * _Nonnull)value;
+- (void)addEvents:(NSSet * _Nonnull)values;
+- (void)removeEvents:(NSSet * _Nonnull)values;
 @end
 
 
