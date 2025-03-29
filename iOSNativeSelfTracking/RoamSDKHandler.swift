@@ -38,6 +38,9 @@ class RoamSDKHandler {
                 UserDefaults.standard.set(userID, forKey: "RoamUserID")
                 completion?(userID)
             }else{
+                if let error = error {
+                    print("Error: \(error.message ?? "")")
+                }
                 completion?(nil)
             }
         }
@@ -45,6 +48,9 @@ class RoamSDKHandler {
     
     func getUser(id: String) {
         Roam.getUser(id) { [weak self] user, error in
+            if let error = error {
+                print("Error: \(error.message ?? "")")
+            }
             print("User: \(user?.userId ?? "na")")
             self?.toogleEventsAndListner() {}
         }
@@ -73,6 +79,9 @@ class RoamSDKHandler {
     func startRoamTracking(mode: RoamTrackingMode, option: RoamTrackingCustomMethods? = nil) {
 //        enableOfflineTracking()
         Roam.startTracking(mode, options: option) { tracking, error in
+            if let error = error {
+                print("Error: \(error.message ?? "")")
+            }
             print("Roam tracking: \(tracking ?? "na")")}
     }
     
@@ -96,5 +105,9 @@ extension RoamSDKHandler: RoamDelegate {
         let recordedAt = locations[0].recordedAt
         print("---->> latitude: \(latitude), longitude: \(longitude)")
         
+    }
+    
+    func onError(_ error: RoamError) {
+        //
     }
 }

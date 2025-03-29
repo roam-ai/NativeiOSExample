@@ -6,7 +6,7 @@ target 'iOSNativeSelfTracking' do
   use_frameworks!
   
   # Pods for iOSNativeSelfTracking
-  pod 'roam-ios', '0.1.30'
+  pod 'roam-ios', '0.1.31'
   
   
   post_install do |installer|
