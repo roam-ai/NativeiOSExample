@@ -11,15 +11,21 @@ class RoamSDKHandler {
     // Singleton instance
     static let shared = RoamSDKHandler()
     private init() {}
-    // Add your publish key
-    private let publishKey = ""
+    
+    private let publishKey = "" // Add your Roam publishable key here
     
     //MARK: - ROAM Methods
     func initalize() {
         Roam.delegate = self
         Roam.initialize(publishKey)
+        // All Roam methods must be called only after successful SDK initialization.
+        // Calling them too early on Sequence (especially on first launch) can result in `MotionStatus.ERROR_INITIALIZE`.
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             Roam.requestLocation()
+        }
+        
+        if let userdId = UserDefaults.standard.value(forKey: "RoamUserID") as? String {
+            getUser(id: userdId)
         }
     }
     
@@ -32,10 +38,11 @@ class RoamSDKHandler {
     }
     
     func createUser(completion: ((String?) -> ())? = nil) {
+        print(#function)
         Roam.createUser("") { [weak self] user, error in
             if let userID = user?.userId {
-                self?.toogleEventsAndListner() {}
                 UserDefaults.standard.set(userID, forKey: "RoamUserID")
+                self?.toogleEventsAndListner() {}
                 completion?(userID)
             }else{
                 if let error = error {
@@ -47,22 +54,26 @@ class RoamSDKHandler {
     }
     
     func getUser(id: String) {
-        Roam.getUser(id) { [weak self] user, error in
+        print(#function)
+        Roam.getUser(id) { user, error in
             if let error = error {
-                print("Error: \(error.message ?? "")")
+                print("Error: \(error.message ?? "Unknown error")")
+            }else {
+                print("User ID: \(user?.userId ?? "N/A")")
             }
-            print("User: \(user?.userId ?? "na")")
-            self?.toogleEventsAndListner() {}
         }
     }
     
     func toogleEventsAndListner(_ completion: @escaping () -> Void?) {
         Roam.toggleListener(Events: false, Locations: true) { roamUser, error in
             if let useriD = roamUser?.userId {
-                Roam.subscribe(.Location, useriD) { status, userId, error in
-                    print("Subscription status: \(status ?? "na")")
-                    print("Subscription userId: \(userId ?? "na")")
-                    print("Subscription error: \(error)")
+                Roam.subscribe(.Location, useriD) { status, subscribedUserId, error in
+                    if let error = error {
+                        print("Subscription error: \(error)")
+                    }else {
+                        print("Subscription status: \(status ?? "N/A")")
+                        print("Subscribed userId: \(subscribedUserId ?? "N/A")")
+                    }
                 }
             }
             completion()
@@ -71,18 +82,21 @@ class RoamSDKHandler {
     
     func logout() {
         Roam.logoutUser { status, error in
-            print("Logout status: \(status ?? "na")")
+            print("Logout status: \(status ?? "N/A")")
+            //reinitializeSDK
             Roam.initialize(self.publishKey)
         }
     }
     
     func startRoamTracking(mode: RoamTrackingMode, option: RoamTrackingCustomMethods? = nil) {
-//        enableOfflineTracking()
+        enableOfflineTracking()
         Roam.startTracking(mode, options: option) { tracking, error in
             if let error = error {
-                print("Error: \(error.message ?? "")")
+                print("Start Tracking Error: \(error.message ?? "Unknown error")")
+            } else {
+                print("Roam Tracking Started: \(tracking ?? "N/A")")
             }
-            print("Roam tracking: \(tracking ?? "na")")}
+        }
     }
     
     func stopTracking(completion: (() ->())? = nil ) {
@@ -93,21 +107,28 @@ class RoamSDKHandler {
 }
 
 //MARK: - RoamDelegate
-
 extension RoamSDKHandler: RoamDelegate {
     func didUpdateLocation(_ locations: [RoamLocation]) {
+        guard let latestLocation = locations.first else { return }
         
-        let latitude = locations[0].location.coordinate.latitude
-        let longitude = locations[0].location.coordinate.longitude
-        let speed = locations[0].speed
-        let horizontalAccuracy = locations[0].location.horizontalAccuracy
-        let verticalAccuracy = locations[0].location.verticalAccuracy
-        let recordedAt = locations[0].recordedAt
-        print("---->> latitude: \(latitude), longitude: \(longitude)")
+        let coordinate = latestLocation.location.coordinate
+        let speed = latestLocation.speed
+        let hAccuracy = latestLocation.location.horizontalAccuracy
+        let vAccuracy = latestLocation.location.verticalAccuracy
+        let recordedAt = latestLocation.recordedAt ?? "N/A"
         
+        print("""
+                Location Updated ->
+                Latitude: \(coordinate.latitude)
+                Longitude: \(coordinate.longitude)
+                Speed: \(speed)
+                Horizontal Accuracy: \(hAccuracy)
+                Vertical Accuracy: \(vAccuracy)
+                Recorded At: \(recordedAt)
+                """)
     }
     
     func onError(_ error: RoamError) {
-        //
+        print("Roam Error - Code: \(error.code ?? "N/A"), Message: \(error.message ?? "Unknown error")")
     }
 }
