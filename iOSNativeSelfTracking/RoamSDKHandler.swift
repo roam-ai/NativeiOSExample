@@ -174,7 +174,6 @@ extension RoamSDKHandler{
     /// Initializes the RoamBatch connector
     func initalizeBatchConnector() {
         RoamBatch.shared.initialize()
-        RoamBatch.shared.enableLogging()
     }
     
     /// Configures batch sync preferences (such as interval and which data types to sync).
