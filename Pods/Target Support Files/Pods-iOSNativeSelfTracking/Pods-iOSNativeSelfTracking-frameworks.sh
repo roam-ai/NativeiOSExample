@@ -183,6 +183,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSCore.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSIoT.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSMobileClientXCF.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/RoamBatchConnector/RoamBatchConnector.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/Roam.framework"
@@ -192,6 +193,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSCore.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSIoT.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam/AWSMobileClientXCF.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/RoamBatchConnector/RoamBatchConnector.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

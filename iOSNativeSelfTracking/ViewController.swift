@@ -9,6 +9,7 @@ import UIKit
 import Roam
 
 class ViewController: UIViewController {
+    
     lazy var createUserButton: UIButton = {
         createButton(title: "Create User", action: #selector(createUser))
     }()
@@ -18,11 +19,16 @@ class ViewController: UIViewController {
     lazy var stopTrackingButton: UIButton = {
         createButton(title: "Stop Tracking", action: #selector(StopTracking))
     }()
+    lazy var ConfigureBatch: UIButton = {
+        createButton(title: "Batch Configuration", action: #selector(configureBatch))
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(createUserButton)
         view.addSubview(startTrackingButton)
         view.addSubview(stopTrackingButton)
+        view.addSubview(ConfigureBatch)
         NSLayoutConstraint.activate([
             createUserButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             createUserButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
@@ -38,8 +44,14 @@ class ViewController: UIViewController {
             stopTrackingButton.topAnchor.constraint(equalTo: startTrackingButton.bottomAnchor, constant: 40),
             stopTrackingButton.heightAnchor.constraint(equalTo: startTrackingButton.heightAnchor),
             stopTrackingButton.widthAnchor.constraint(equalTo: startTrackingButton.widthAnchor),
+            
+            ConfigureBatch.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            ConfigureBatch.topAnchor.constraint(equalTo: stopTrackingButton.bottomAnchor, constant: 40),
+            ConfigureBatch.heightAnchor.constraint(equalTo: stopTrackingButton.heightAnchor),
+            ConfigureBatch.widthAnchor.constraint(equalTo: stopTrackingButton.widthAnchor),
         ])
     }
+    
     private func createButton(title: String, action: Selector) -> UIButton {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -51,9 +63,11 @@ class ViewController: UIViewController {
         button.addTarget(self, action: action, for: .touchUpInside)
         return button
     }
+    
     @objc private func startTracking() {
         RoamSDKHandler.shared.startRoamTracking(mode: .active)
     }
+    
     @objc private func StopTracking() {
         RoamSDKHandler.shared.stopTracking()
     }
@@ -62,5 +76,15 @@ class ViewController: UIViewController {
         RoamSDKHandler.shared.createUser { userId in
             print("User ID: \(userId ?? "na")")
         }
+    }
+    
+    @objc private func configureBatch() {
+        // Set true to enable
+        // Set false to disable
+        UserDefaults.standard.set(true, forKey: "batchEnabled")
+        // Batch Sync Interval
+        UserDefaults.standard.set(1, forKey: "batchInput")
+        
+        RoamSDKHandler.shared.configureBatchSync()
     }
 }

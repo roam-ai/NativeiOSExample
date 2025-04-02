@@ -7,6 +7,7 @@ target 'iOSNativeSelfTracking' do
   
   # Pods for iOSNativeSelfTracking
   pod 'roam-ios', '0.1.31'
+  pod 'roam-ios/RoamBatchConnector', '0.1.31'
   
   
   post_install do |installer|

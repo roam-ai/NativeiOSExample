@@ -1,10 +1,10 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/roam-ios/Roam" "${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/roam-ios/Roam" "${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/Roam" "${PODS_XCFRAMEWORKS_BUILD_DIR}/roam-ios/RoamBatchConnector"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) /usr/lib/swift '@executable_path/Frameworks' '@loader_path/Frameworks'
 LIBRARY_SEARCH_PATHS = $(inherited) "${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}" /usr/lib/swift
-OTHER_LDFLAGS = $(inherited) -framework "AWSAuthCore" -framework "AWSCognitoIdentityProvider" -framework "AWSCognitoIdentityProviderASF" -framework "AWSCore" -framework "AWSIoT" -framework "AWSMobileClientXCF" -framework "Roam"
+OTHER_LDFLAGS = $(inherited) -framework "AWSAuthCore" -framework "AWSCognitoIdentityProvider" -framework "AWSCognitoIdentityProviderASF" -framework "AWSCore" -framework "AWSIoT" -framework "AWSMobileClientXCF" -framework "Roam" -framework "RoamBatchConnector"
 OTHER_MODULE_VERIFIER_FLAGS = $(inherited) "-F${PODS_CONFIGURATION_BUILD_DIR}/roam-ios"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
